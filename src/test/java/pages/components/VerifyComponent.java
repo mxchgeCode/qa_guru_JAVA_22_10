@@ -11,8 +11,6 @@ import static com.codeborne.selenide.WebDriverConditions.url;
 public class VerifyComponent {
 
     SelenideElement articleTitlePage = $x("//h1[@class='article-head__title']");
-    SelenideElement questTitlePage = $x("//h1[@class='article-quest__title']");
-
     public VerifyComponent verifyUrl(String pageUrl) {
         webdriver().shouldHave(url(pageUrl));
         return this;
@@ -27,13 +25,4 @@ public class VerifyComponent {
         articleTitlePage.shouldHave(text(titleText));
         return this;
     }
-
-    public VerifyComponent verifyPageQuestText(String titleText) {
-        questTitlePage.shouldHave(text(titleText));
-        return this;
-    }
-
-
-
-
 }

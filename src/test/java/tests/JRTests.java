@@ -7,14 +7,14 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import pages.JavaRushMainPage;
+import pages.JRMainPage;
 import pages.components.VerifyComponent;
 
 import java.util.stream.Stream;
 
 @Tags({@Tag("UI"), @Tag("MainPage")})
 public class JRTests extends TestBase {
-    JavaRushMainPage javaRushMainPage = new JavaRushMainPage();
+    JRMainPage javaRushMainPage = new JRMainPage();
     VerifyComponent verifyComponent = new VerifyComponent();
 
     @CsvSource(value = {
